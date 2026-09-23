@@ -42,6 +42,7 @@ creeper.follow(steve, 30)
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function on_enemy_overlap(player: Sprite, enemy: Sprite) {
     info.changeLifeBy(-1)
     player.startEffect(effects.fire, 300)
+    music.playTone(220, 150)
     enemy.setPosition(randint(20, 140), randint(20, 100))
 })
 game.onUpdate(function check_score() {

@@ -56,6 +56,7 @@ creeper.follow(steve, 30)
 def on_enemy_overlap(player, enemy):
     info.change_life_by(-1)
     player.start_effect(effects.fire, 300)
+    music.play_tone(220, 150)
     enemy.set_position(randint(20, 140), randint(20, 100))
 
 
